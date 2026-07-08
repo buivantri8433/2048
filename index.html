@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="vi" data-theme="dark">
+<html lang="en" data-theme="dark">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -110,24 +110,24 @@
   <header>
     <div>
       <h1>2048</h1>
-      <div class="sub">Ghép các ô để đạt <b>2048</b>!</div>
+      <div class="sub">Join the numbers and get to the <b>2048</b> tile!</div>
     </div>
     <div class="scores">
-      <div class="scorebox"><div class="lbl">Điểm</div><div class="val" id="score">0</div></div>
-      <div class="scorebox"><div class="lbl">Kỷ lục</div><div class="val" id="best">0</div></div>
+      <div class="scorebox"><div class="lbl">SCORE</div><div class="val" id="score">0</div></div>
+      <div class="scorebox"><div class="lbl">BEST</div><div class="val" id="best">0</div></div>
     </div>
   </header>
   <div class="bar">
-    <p>Phím mũi tên / WASD hoặc vuốt màn hình.</p>
-    <button class="ghost" id="theme" title="Đổi giao diện sáng/tối" aria-label="Đổi giao diện sáng/tối">🌙</button>
-    <button class="primary" id="newgame">Chơi mới</button>
+    <p>Use arrow keys / WASD or swipe on screen.</p>
+    <button class="ghost" id="theme" title="Toggle light/dark theme" aria-label="Toggle light/dark theme">🌙</button>
+    <button class="primary" id="newgame">New Game</button>
   </div>
   <div class="board" id="board">
     <div class="grid" id="grid"></div>
     <div class="tiles" id="tiles"></div>
     <div class="overlay" id="overlay">
-      <h2 id="ov-title">Hết nước đi!</h2>
-      <button class="primary" id="ov-btn">Chơi lại</button>
+      <h2 id="ov-title">Game Over!</h2>
+      <button class="primary" id="ov-btn">Play Again</button>
     </div>
   </div>
 </div>
@@ -256,7 +256,7 @@
   }
 
   function showOver(isWin){
-    ovTitle.textContent = isWin ? '🎉 Bạn thắng rồi!' : 'Hết nước đi!';
+    ovTitle.textContent = isWin ? '🎉 You Win!' : 'Game Over!';
     ovTitle.classList.toggle('win', isWin);
     overlay.classList.add('show');
   }
